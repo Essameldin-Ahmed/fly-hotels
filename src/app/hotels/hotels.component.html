@@ -1,0 +1,9 @@
+<div class="nights-chooser">
+    <div class="container">
+        <div class="nights-counter my-5">
+            how many nights will you stay there! <input type="number" (keyup)="changeNights()" (change)="changeNights()"  class="form-control w-25 d-inline-block mx-3" [(ngModel)]="nightsCount">
+        </div>
+    </div>
+</div>
+<app-hotels-list></app-hotels-list>
+<app-hotel-details [nightsCount]="submittedCount"></app-hotel-details>

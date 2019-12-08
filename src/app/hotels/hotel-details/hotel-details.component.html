@@ -1,0 +1,15 @@
+<section class="hotel-details my-5" *ngIf="hotelDetails">
+
+    <div class="container">
+        <div class="hotel-wrapper">
+            <h1>{{hotelDetails.name}}</h1>
+            <div class="card-text">
+                <p class="single-item">{{hotelDetails.pricePerNight * (nightsCount || 1) | currency}} for
+                    {{nightsCount || 1}}
+                    night </p>
+            </div>
+            <app-images-gallery [gallery]="hotelDetails.pictures" *ngIf="hotelDetails.pictures"></app-images-gallery>
+            <app-comments [commentsList]="hotelDetails.reviews" *ngIf="hotelDetails.reviews"></app-comments>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<div class="comment-item" *ngIf="comment">
+    <div class="media align-items-center">
+        <div class="mr-3 rating-wrapper">
+            <i class="fas fa-star"></i>
+            <div>{{comment.score}}</div>
+        </div>
+        <div class="media-body">
+            <div>{{comment.review}}</div>
+        </div>
+    </div>
+</div>

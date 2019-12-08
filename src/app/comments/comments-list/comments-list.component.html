@@ -1,0 +1,12 @@
+<h2 class="my-5">What Customers Say!</h2>
+<div class="comments-list" *ngIf="viewdList">
+    <div class="sort-wrapper">
+        OrderBy : 
+        <button class="btn btn-primary mr-3" [ngClass]="{'clicked': orderTop}" (click)="changeOrder(true)"> Score <i class="fas fa-arrow-up"></i></button>
+        <button class="btn btn-danger" [ngClass]="{'clicked': orderBottom}" (click)="changeOrder(false)"> Score <i class="fas fa-arrow-down"></i></button>
+    </div>
+
+    <app-comment-card [comment]="comment" *ngFor="let comment of viewdList"></app-comment-card>
+    <app-pagination [configuration]="configuration" *ngIf="configuration" (pageNumberChanged)="changePage($event)">
+    </app-pagination>
+</div>

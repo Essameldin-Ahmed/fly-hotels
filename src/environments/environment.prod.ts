@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseURI: 'http://my-json-server.typicode.com/fly365com/code-challenge'
 };

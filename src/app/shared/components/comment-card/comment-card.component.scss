@@ -1,0 +1,14 @@
+.comment-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    .rating-wrapper {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 7px 25px;
+        border-radius: 25px;
+        i {
+            color: #ff6c01;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div class="card" *ngIf="hotelCard">
+    <img [src]="hotelCard.photo" class="card-img-top" [alt]="hotelCard.name">
+    <div class="card-body">
+        <h5 class="card-title">{{hotelCard.name}}</h5>
+        <div class="card-text">
+            <p class="single-item">{{hotelCard.pricePerNight * (nightsCount || 1) | currency}} for {{nightsCount || 1}} night </p> 
+        </div>
+        <button (click)="onCardClicked()" class="btn btn-primary btn-block" [disabled]="hotelCard.id === activeHotelID">More Info !</button>
+    </div>
+</div>
